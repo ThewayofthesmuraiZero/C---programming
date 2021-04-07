@@ -22,7 +22,7 @@ int main()
         result = a* sin((x * x - 1) / 10);
         cout << "При условии ((x * a) < 1) => y = " << setprecision(15) << result;
     }
-    else ((x * a) >= 1);
+    else ;
     {
         result = a* cos((x - 1) / 10);
         cout << "При условии ((x * a) => 1) => y = " << setprecision(15) << result;
