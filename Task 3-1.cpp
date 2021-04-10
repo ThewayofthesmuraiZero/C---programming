@@ -4,48 +4,39 @@
 #include <limits>
 
 using namespace std;
-void  IsCalulted(const double x, double y);
-void  y(const double x, const double y);
 
+double y(const double x);
+/**
+ * \brief Точка входа в программу.
+ * \return Код ошибки (0 - успех).
+ */
 int main()
 {
-	setlocale(LC_ALL, "RUSSIAN");
-
-	const auto leftBound = 1.0;
-	const auto rightBound = 0.5;
-	const auto step = 0.1;
-
-	auto x = leftBound;
-	cout << "x             y \n";
-
-	while ((x < leftBound) || (abs(x - rightBound) < step))
-	{
-		double y;
-		if ( IsCalulted(x, y))
-		{
-			cout << " x = " << setprecision(2) << x
-				<< "y = " << setprecision(5) << y << endl;
-			x += step;
-		}
-		else
-		{
-			cout << " x = " << setprecision(2) << x
-				<< " not defined\n";
-		}
-
-	}
-
-
-
-	void  IsCalulted(const double x, double y);
-	{
-		const auto IsCalulated = x >= 0;
-	}
+    const auto leftBound = 1.0;
+    const auto rightBound = 0.5;
+    const auto step = 0.1;
 	
-	void y(const double x, const double y);
-	{
-	    return x + cos(pow(x, 0.52) + 2);
-	}
-	return 0;
+	/// leftBound - левая переменная в константе х
+	/// rightBound - правая переменная  в константе х
+	/// step - шаг,
 
+    auto x = leftBound;
+    while ((x < rightBound) || (abs(x - rightBound) < step))
+	    ///Данный цикл (while )выполняет определенные действия, пока условие истинно. Структура цикла while.
+	    ///Цикл while имеет самую простую структуру из всех циклов (по сравнению с тем же циклом for).
+	    ///abs- модуль числа, предположительно, нам важно, что бы числа е были отрицательными
+    {
+        cout << "x = " << setprecision(2) << x << " y =  " << setprecision(5) << y(x) << endl;
+	   //// setprecision - точность вывода чисел (по умолчанию равна 6. Чтобы более корректно выводить информацию.
+        x += step;
+	    /// Состваной оператор сложения и присваивания " += "
+    }
+    return 0;
+}
+
+double y(const double x)
+{
+    return x + cos(pow(x, 0.52) + 2);
+	/// Функция, по которой происходит расчет
+	/// pow(x,y)-возведенеие в степень ,х- число, у - степень
 }
