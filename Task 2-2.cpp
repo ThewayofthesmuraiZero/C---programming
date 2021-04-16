@@ -13,9 +13,7 @@ using namespace std;
  * \const double a Входная величина.
  * \return Значение функции.
  */
-
 double f1(const double x, const double a);
-
 /**
  * \brief Функция расчета для случая, когда x <= a.
  * \param x Входная величина.
@@ -29,7 +27,6 @@ double f2(const double x, const double a);
  * \brief Точка входа в программу.
  * \return Код ошибки (0 - успех).
  */
-
 int main() 
 {
     setlocale(LC_ALL, "RUSSIAN");
