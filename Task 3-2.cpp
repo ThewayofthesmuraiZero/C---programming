@@ -68,7 +68,6 @@ double Sum(const size_t size)
 
     return sum;
 }
-
 double Sum(const double epsilon)
 {
     auto previous = 1.0 / (2 * 2 * 3);
