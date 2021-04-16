@@ -32,7 +32,6 @@ double f2(const double x, const double a);
 
 int main() 
 {
-
     setlocale(LC_ALL, "RUSSIAN");
        const auto a = 0.3;
     double x;
