@@ -2,12 +2,8 @@
 #include <iostream>
 using namespace std;
 
-/// длина ребракуба
+/// длина ребра куба
 ///найти по выбору пользователя - 1 площадь грани 2 площадь полной поверхности 3 объем
-
-double Facearea(const double cubeedge);
-double TotalSurfaceArea(const double cubeedge);
-double VolumeCube(const double cubeedge);
 
 /**
  * \Facearea расчет площади грани куба
@@ -16,7 +12,15 @@ double VolumeCube(const double cubeedge);
  * \cubeedge - ребро куба
  */
 
-enum ActionChoice { facearea, totalSurfaceArea, volumeCube };
+double FaceArea(const double cubeedge);
+
+double TotalSurfaceArea(const double cubeedge);
+
+double VolumeCube(const double cubeedge);
+
+
+
+enum ActionChoice { FaceFrea, TotalSurfaceArea, VolumeCube };
 
 /**
  * \brief Точка входа в программу.
@@ -44,8 +48,8 @@ int main()
     {
         case Facearea:
         {
-        const auto facearea = Facearea(cubeedge);
-            cout << "Площадь грани= " << Facearea;
+        const auto facearea = FaceFrea(cubeedge);
+            cout << "Площадь грани= " << FaceFrea;
             break;
         }
         case totalSurfaceArea:
@@ -64,7 +68,7 @@ int main()
  return 0;
 }
 
-double Facearea(const double cubeedge)
+double FaceFFrea(const double cubeedge)
 { 
  retutn cubeedge * cubeedge;
 }
