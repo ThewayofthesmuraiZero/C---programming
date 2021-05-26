@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -6,17 +6,16 @@ using namespace std;
  * \brief Рассчитывает сумму ряда через рекуррентное соотношение
  * до тех пор, пока текущий член ряда не превосходит epsilon
  * \param epsilon точность расчета суммы ряда
- * \return
+ * \return 
  */
 double Sum(const double epsilon);
 /**
  * \brief Рассчитывает сумму ряда через рекуррентное соотношение
  * из n членов
  * \param size количество членов ряда
- * \return
+ * \return 
  */
 double Sum(const size_t size);
-
 
 /**
  * \brief Функция расчета рекуррентного соотношения
@@ -31,8 +30,6 @@ double Recurrence(const size_t index);
  */
 int main()
 {
-    setlocale(LC_ALL, "RUSSIAN");
-
     cout << "Введите количество членов ряда = ";
     size_t count;
     cin >> count;
@@ -42,7 +39,7 @@ int main()
     cin >> epsilon;
 
     const auto sumNumber = Sum(count);
-    cout << "\nСумма " << count << " членов ряда = " << sumNumber;
+    cout << "\nСумма "<< count << " членов ряда = " << sumNumber;
 
     const auto sumEpsilon = Sum(epsilon);
     cout << "\nСумма членов ряда = " << sumEpsilon << " с точностью " << epsilon;
@@ -52,12 +49,12 @@ int main()
 
 double Recurrence(const size_t index)
 {
-    return (pow((index+1),3))/index ;
+    return (index+1)*(index+1)*(index+1) / index ;
 }
 
 double Sum(const size_t size)
-{
-    auto previous = 1.0 / (2 * 2 * 3);
+{   
+    auto previous = 1.0 ;
     auto sum = previous;
     for (size_t k = 1; k < size; k++)
     {
@@ -68,9 +65,10 @@ double Sum(const size_t size)
 
     return sum;
 }
+
 double Sum(const double epsilon)
 {
-    auto previous = 1.0 / (2 * 2 * 3);
+    auto previous = 1.0 ;
     auto sum = previous;
     auto k = 1;
     while (abs(previous) > epsilon)
